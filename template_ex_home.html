@@ -1,0 +1,23 @@
+{% extends "template_ex_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h3>Welcome to David's Username Check</h3>
+    <p class="lead">Let's check if your username is secure</p>
+    <p>Please fill out the below form with a username that meets the following requirements:</p>
+    <ul>
+        <li>Must contain an upper case letter.</li>
+        <li>Must contain a lower case letter.</li>
+        <li>Must end with a number.</li>
+    </ul>
+    <form action="{{url_for('template_ex_result')}}">
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+{% endblock %}
