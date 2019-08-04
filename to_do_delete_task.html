@@ -1,0 +1,16 @@
+{% extends "to_do_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h3>Remove tasks from your to do list</h3>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.id.label }} {{form.id}}
+        {{ form.submit() }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

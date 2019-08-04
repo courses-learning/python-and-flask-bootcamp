@@ -1,0 +1,23 @@
+{% extends "to_do_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+    {% if all_tasks %}
+    <h3>Current To Do List</h3>
+    <p class="lead">Task descriptions with ID numbers on the left</p>
+        {% for task in all_tasks %}
+        <p>{{ task }}</p>
+        {% endfor %}
+
+    {% else %}
+    <h3>You don't currently have any tasks in your to do list!</h3>
+    <p class="lead">Please use the add page to store tasks here</p>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}
